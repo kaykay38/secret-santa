@@ -38,11 +38,11 @@ jobs:
 
     - name: dotnet publish (API)
       working-directory: ./SecretSanta/src/SecretSanta.Api/
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/Api
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/api
 
     - name: dotnet publish (WEB)
       working-directory: ./SecretSanta/src/SecretSanta.Web/
-      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/Web
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/web
 
 
   deploy:
@@ -53,11 +53,20 @@ jobs:
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
     
     steps:
-    - name: Deploy to Azure Web App
+    - name: Deploy API App
+      id: deploy-to-apiapp
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: 'cscd379-secret-santa-mia-api'
+        slot-name: Production
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F83EBD9EBBA5406A898B0B424897CA49 }}
+        package: ${{env.DOTNET_ROOT}}/api
+    
+    - name: Deploy Web App
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'cscd379-secret-santa-mia'
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCAD504839644D06A8BAAD8B64B92A95 }}
-        package: .
+        package: ${{env.DOTNET_ROOT}}/web
