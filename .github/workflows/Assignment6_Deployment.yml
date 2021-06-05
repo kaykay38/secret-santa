@@ -57,7 +57,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'EWU-CSCD379-2021-Spring-Mia'
+        app-name: 'cscd379-secret-santa-mia'
         slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCAD504839644D06A8BAAD8B64B92A95 }}
         package: .
