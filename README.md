@@ -1,8 +1,8 @@
 ﻿
 # Assignment 6
 
-![](../../workflows/AssignmentBuild.yml/badge.svg)
-![](../../workflows/Deployment.yml/badge.svg)
+![](../../workflows/Build And Test/badge.svg)
+![](../../workflows/Deployment/badge.svg)
 
 [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://cscd379-secret-santa-mia.azurewebsites.net)
 
