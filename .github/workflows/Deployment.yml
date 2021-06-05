@@ -44,15 +44,6 @@ jobs:
       working-directory: ./SecretSanta/src/SecretSanta.Web/
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/web
 
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-    
-    steps:
     - name: Deploy API App
       id: deploy-to-apiapp
       uses: azure/webapps-deploy@v2
