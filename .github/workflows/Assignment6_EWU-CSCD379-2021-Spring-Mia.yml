@@ -58,6 +58,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'EWU-CSCD379-2021-Spring-Mia'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6d4b8849e10f4e33af8e83d197577dd9 }}
+        slot-name: Production
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CCAD504839644D06A8BAAD8B64B92A95 }}
         package: .
