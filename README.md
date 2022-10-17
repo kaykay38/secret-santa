@@ -1,6 +1,5 @@
 ﻿In this assignment we are going to create some automated web tests as well as convert Gifts screens to use AlpineJS instead of the MVC model
 
-# Assignment
 - Using PlaywrightSharp, automate the following items of the website
   - Verify that when landing on the homepage, Secret Santa is displayed in the navigation banner ✔❌
   - Verify that all 3 pages (Users, Groups, Gifts) can be reached via clicking on the navigation elements ✔❌
@@ -13,3 +12,12 @@
   - Create page should submit the Users information via javascript directly to the API. Upon successful save, the user should be redirected back to the Users index page ✔❌
   - Edit page should submit the Users information via javascript directly to the API. Upon successful update, the user should be redirected back to the Users index page ✔❌
   - Delete opration should submit the request directly to the API via javascript and then refresh the Index page via a javascript call directly to the API ✔❌
+﻿
+
+[![Build And Test](https://github.com/kaykay38/EWU-CSCD379-2021-Spring/actions/workflows/BuildAndTest.yml/badge.svg)](https://github.com/kaykay38/EWU-CSCD379-2021-Spring/actions/workflows/BuildAndTest.yml)
+[![Deployment](https://github.com/kaykay38/EWU-CSCD379-2021-Spring/actions/workflows/Deployment.yml/badge.svg)](https://github.com/kaykay38/EWU-CSCD379-2021-Spring/actions/workflows/Deployment.yml)
+[![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://cscd379-secret-santa-mia.azurewebsites.net)
+
+Website: https://cscd379-secret-santa-mia.azurewebsites.net
+
+Repo: https://github.com/kaykay38/EWU-CSCD379-2021-Spring/tree/Assignment6
